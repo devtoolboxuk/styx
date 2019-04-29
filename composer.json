@@ -1,12 +1,12 @@
 {
-  "name": "devtoolboxuk/sytx",
+  "name": "devtoolboxuk/styx",
   "description": "AntiFlood Service for AEGIS",
   "type": "library",
   "license": "MIT",
   "autoload": {
     "psr-4": {
       "": "src/",
-      "devtoolboxuk\\sytx\\": "src/"
+      "devtoolboxuk\\styx\\": "src/"
     },
     "classmap": [
       "src"
