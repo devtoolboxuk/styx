@@ -17,7 +17,7 @@ class SessionStorage implements StorageInterface
     {
         $this->namespace = self::SESSION_NAMESPACE . "." . $namespace;
         if ($this->hasSessionStarted()) {
-            $this->storage = $_SESSION[$this->namespace];
+            $this->storage = isset($_SESSION[$this->namespace]) ? $_SESSION[$this->namespace] : null;
         }
     }
 
@@ -47,7 +47,7 @@ class SessionStorage implements StorageInterface
     protected function getStorageItem($key)
     {
         if ($this->hasSessionStarted()) {
-            $this->storage = $_SESSION[$this->namespace];
+            $this->storage = isset($_SESSION[$this->namespace]) ? $_SESSION[$this->namespace] : null;
         }
         if (isset($this->storage[$key])) {
             return $this->storage[$key];
